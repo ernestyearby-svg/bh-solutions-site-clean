@@ -1128,6 +1128,156 @@ img[alt="Alliance Property Network logo"] {
   line-height: 1.6;
   opacity: 0.85;
 }
+/* ===== AUCTIONS PAGE ===== */
+
+.auctions-page {
+background: #0b1220;
+color: #f3f6ff;
+}
+
+.main-header {
+background: #0b1220;
+padding: 16px 0;
+border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container {
+width: min(1100px, 95%);
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav a {
+margin-left: 20px;
+text-decoration: none;
+color: #dfe6ff;
+font-weight: 600;
+}
+
+nav a.active {
+color: #c9a23a;
+}
+
+.auction-hero {
+position: relative;
+min-height: 75vh;
+background: url("assets/auctions/auction-poster-1.jpg") center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(
+rgba(6, 12, 24, 0.75),
+rgba(6, 12, 24, 0.9)
+);
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 900px;
+}
+
+.hero-badge {
+display: inline-block;
+padding: 6px 14px;
+background: rgba(255,255,255,0.1);
+border-radius: 30px;
+font-weight: 700;
+font-size: 14px;
+}
+
+.hero-buttons {
+margin: 20px 0;
+}
+
+.hero-pills {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 14px;
+margin-top: 20px;
+}
+
+.hero-pills div {
+background: rgba(255,255,255,0.08);
+padding: 8px 14px;
+border-radius: 20px;
+font-size: 14px;
+}
+
+.btn {
+padding: 12px 20px;
+border-radius: 8px;
+font-weight: 700;
+text-decoration: none;
+display: inline-block;
+}
+
+.btn-gold {
+background: linear-gradient(180deg, #c9a23a, #a7811f);
+color: #0b1220;
+}
+
+.btn-outline {
+border: 1px solid #c9a23a;
+color: #c9a23a;
+}
+
+.auction-section {
+padding: 80px 0;
+}
+
+.container {
+width: min(1100px, 95%);
+margin: 0 auto;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+
+.poster {
+width: 100%;
+border-radius: 16px;
+margin-top: 20px;
+}
+
+.auction-register {
+background: #121b2e;
+padding: 80px 0;
+text-align: center;
+}
+
+.auction-form {
+display: grid;
+gap: 14px;
+max-width: 500px;
+margin: 30px auto;
+}
+
+.auction-form input {
+padding: 12px;
+border-radius: 6px;
+border: none;
+}
+
+.main-footer {
+padding: 30px 0;
+text-align: center;
+background: #0b1220;
+font-size: 14px;
+}
+
 
 
 
