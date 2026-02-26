@@ -1,79 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BH Solutions Auto Auctions</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BH Solutions Auto Auctions</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 
-<body data-page="auctions">
+<body class="auctions-page">
 
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a href="index.html" class="nav-brand">
-        <img src="assets/bh-header-gold.png" alt="BH Solutions" class="nav-logo" />
-      </a>
+<header class="main-header">
+<div class="nav-container">
+<a href="index.html" class="logo">BH</a>
 
-      <nav class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="inventory.html" class="nav-link">Inventory</a>
-        <a href="pre-approval.html" class="nav-link">Pre-Approval</a>
-        <a href="real-estate.html" class="nav-link">Real Estate</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="auctions.html" class="nav-link active">Auctions</a>
-      </nav>
-    </div>
-  </header>
+<nav>
+<a href="index.html">HOME</a>
+<a href="inventory.html">INVENTORY</a>
+<a href="pre-approval.html">PRE-APPROVAL</a>
+<a href="real-estate.html">REAL ESTATE</a>
+<a href="about.html">ABOUT</a>
+<a href="auctions.html" class="active">AUCTIONS</a>
+</nav>
+</div>
+</header>
 
-  <section class="section">
-    <div class="shell">
-      <h1>BH Solutions Auto Auctions</h1>
-      <p class="hero-sub">
-        Dealer-Only Online Timed Auctions  
-        Serving Oroville • Chico • North Valley • Bay Area • Fresno • Bakersfield
-      </p>
+<!-- HERO -->
+<section class="auction-hero">
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-badge">DEALER-ONLY • ONLINE TIMED AUCTIONS</div>
 
-      <h2>Why This Lane Works</h2>
-      <ul class="feature-list">
-        <li>No transport expense unless sold</li>
-        <li>Reserve control — you decide the floor</li>
-        <li>Verified licensed dealer bidders only</li>
-        <li>48-hour payment discipline</li>
-        <li>Structured arbitration</li>
-      </ul>
-    </div>
-  </section>
+<h1>BH Solutions Auto Auctions</h1>
 
-  <section id="register" class="section section-dark">
-    <div class="shell">
-      <h2>Founding Dealer Registration</h2>
+<p class="hero-sub">
+Serving Oroville • Chico • North Valley • Bay Area • Fresno • Bakersfield
+</p>
 
-      <form action="https://formsubmit.co/bhsolutions321@gmail.com" method="POST" class="form">
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_subject" value="BH Auctions Registration" />
+<div class="hero-buttons">
+<a href="#register" class="btn btn-gold">Register as a Dealer</a>
+<a href="inventory.html" class="btn btn-outline">View Auction Inventory</a>
+</div>
 
-        <input type="text" name="Dealer Business Name" placeholder="Dealer Business Name" required />
-        <input type="text" name="Contact Name" placeholder="Contact Name" required />
-        <input type="text" name="Dealer License Number" placeholder="Dealer License Number" required />
-        <input type="email" name="Email" placeholder="Email Address" required />
-        <input type="tel" name="Phone" placeholder="Phone Number" required />
+<div class="hero-pills">
+<div>Verified Dealers Only</div>
+<div>Reserve Control</div>
+<div>48-Hour Payment</div>
+<div>No Transport Until Sold</div>
+</div>
+</div>
+</section>
 
-        <button type="submit" class="btn-gold">
-          Submit Registration
-        </button>
-      </form>
-    </div>
-  </section>
+<!-- WHY SECTION -->
+<section class="auction-section">
+<div class="container">
+<h2>Why This Lane Works</h2>
 
-  <footer class="site-footer">
-    <div class="shell">
-      <p>
-        BH Solutions Auto Auctions is a licensed California dealer-operated wholesale exchange.
-      </p>
-    </div>
-  </footer>
+<div class="two-col">
+<ul>
+<li>No transport expense unless sold</li>
+<li>Reserve control — you decide the floor</li>
+<li>Verified dealer bidders only</li>
+<li>48-hour payment discipline</li>
+<li>Structured arbitration support</li>
+</ul>
 
-  <script src="script.js"></script>
+<div class="how-box">
+<h3>Simple. Controlled. Transparent.</h3>
+
+<div class="steps">
+<div><strong>1.</strong> Register & Verify</div>
+<div><strong>2.</strong> Upload or Browse</div>
+<div><strong>3.</strong> Timed Online Bidding</div>
+<div><strong>4.</strong> 48-Hour Payment & Release</div>
+</div>
+
+<div class="upcoming">
+<strong>Upcoming Auction</strong><br>
+Oroville, CA • Launching Soon
+</div>
+
+<a href="#register" class="btn btn-gold">Get Early Access</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- POSTER IMAGE -->
+<section class="auction-section">
+<div class="container">
+<h2>Grand Opening Flyer</h2>
+<img src="assets/auctions/auction-poster-2.jpg" class="poster" />
+</div>
+</section>
+
+<!-- REGISTRATION -->
+<section id="register" class="auction-register">
+<div class="container">
+<h2>Founding Dealer Registration</h2>
+
+<form class="auction-form" method="POST" action="#">
+<input placeholder="Dealer Business Name" required />
+<input placeholder="Contact Name" required />
+<input placeholder="Dealer License #" required />
+<input type="email" placeholder="Email Address" required />
+<input type="tel" placeholder="Phone Number" required />
+<button class="btn btn-gold" type="submit">Submit Registration</button>
+</form>
+
+<p class="small-text">
+BH Solutions Auto Auctions is a licensed California dealer-operated wholesale exchange.
+</p>
+</div>
+</section>
+
+<footer class="main-footer">
+BH Solutions, LLC • 4801 Feather River Blvd. #1A, Oroville, CA 95965
+</footer>
+
 </body>
 </html>
