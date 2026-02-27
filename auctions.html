@@ -2,74 +2,107 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BH Solutions Auto Auctions — Dealer Registration</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BH Solutions Auto Auctions — Pre-Registration</title>
 
-<!-- Use your existing site stylesheet -->
+<!-- Your main stylesheet -->
 <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<!-- OPTIONAL: If your site already has a header/nav, keep yours and delete this header block -->
+<!-- NAV (keep your existing nav markup if you already have one) -->
 <header class="site-header">
-<nav class="site-nav">
+<nav class="nav">
 <a href="index.html">HOME</a>
 <a href="inventory.html">INVENTORY</a>
 <a href="pre-approval.html">PRE-APPROVAL</a>
 <a href="real-estate.html">REAL ESTATE</a>
 <a href="about.html">ABOUT</a>
-<a href="auctions.html" class="active">AUCTIONS</a>
+<a class="active" href="auctions.html">AUCTIONS</a>
 <a href="contact.html">CONTACT</a>
 </nav>
 </header>
 
-<main>
+<!-- PAGE -->
+<main class="auctions-page">
 
-<!-- HERO POSTER + CTA -->
+<!-- TOP HERO / BANNER -->
 <section class="auction-hero">
+<!-- Put the banner image in /assets and reference it here -->
 <img
-src="auctions-poster-1.png"
-alt="BH Solutions Auto Auctions"
-class="auction-poster"
+src="assets/auctions-hero-horizontal.png"
+alt="BH Solutions Auto Auctions — Dealer-only Online Timed Auctions"
+class="auction-hero-img"
 />
 
-<div class="auction-cta">
-<a href="#dealer-registration" class="primary-btn">
-Get Early Access
-</a>
+<!-- Optional: Keep button for scroll (works even if not a “real” early access system) -->
+<div class="auction-hero-cta">
+<a class="primary-btn" href="#dealer-registration">Early Access</a>
 </div>
 </section>
 
-<!-- DEALER REGISTRATION FORM -->
+<!-- BOTTOM: REGISTRATION -->
 <section id="dealer-registration" class="dealer-form-section">
+<div class="dealer-form-card">
 <h2>Founding Dealer Registration</h2>
-<p class="dealer-form-sub">
-Dealer-only access. Verification required.
-</p>
+<p class="subtext">Dealer-only access. Verification required.</p>
 
-<!-- IMPORTANT: Replace YOUR_FORM_ID with your real Formspree form id -->
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="dealer-form">
+<!-- Formspree: replace YOUR_FORM_ID with your real ID -->
+<form
+class="dealer-form"
+action="https://formspree.io/f/YOUR_FORM_ID"
+method="POST"
+>
+<!-- Helps email formatting -->
+<input type="hidden" name="_subject" value="NEW BH AUCTIONS PRE-REGISTRATION" />
+
+<div class="form-grid">
+<label>
+Full Name
 <input type="text" name="full_name" placeholder="Full Name" required />
+</label>
+
+<label>
+Dealership Name
 <input type="text" name="dealership" placeholder="Dealership Name" required />
+</label>
+
+<label>
+Dealer License #
 <input type="text" name="dealer_license" placeholder="Dealer License #" required />
+</label>
+
+<label>
+Email Address
 <input type="email" name="email" placeholder="Email Address" required />
+</label>
+
+<label>
+Phone Number
 <input type="tel" name="phone" placeholder="Phone Number" required />
+</label>
+</div>
 
-<!-- optional hidden fields to make emails cleaner -->
-<input type="hidden" name="source" value="BH Auctions Landing Page" />
-
-<button type="submit" class="primary-btn">
-Register as a Dealer
+<button type="submit" class="primary-btn full-width">
+Register for Pre-Approval
 </button>
+
+<p class="fineprint">
+By submitting, you consent to be contacted for verification and auction access.
+</p>
 </form>
+</div>
 </section>
 
 </main>
 
-<!-- OPTIONAL FOOTER -->
 <footer class="site-footer">
-<small>BH Solutions, LLC • Oroville, CA</small>
+<div class="footer-inner">
+<span>bhsolutions.net</span>
+<span>(530) 420-1863</span>
+<span>4801 Feather River Blvd. #1A, Oroville, CA</span>
+</div>
 </footer>
 
 </body>
