@@ -1480,6 +1480,65 @@ grid-template-columns: 1fr;
 padding-top: 18px;
 }
 }
+.dealer-form-section {
+background: #0f1116;
+padding: 80px 20px;
+text-align: center;
+color: #ffffff;
+}
+
+.dealer-form-card {
+max-width: 480px;
+margin: 0 auto;
+}
+
+.dealer-form-card h2 {
+font-size: 28px;
+margin-bottom: 12px;
+font-weight: 600;
+}
+
+.subtext {
+color: #9aa3b2;
+margin-bottom: 35px;
+font-size: 14px;
+}
+
+.dealer-form-card form {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+.dealer-form-card input {
+padding: 14px;
+border-radius: 6px;
+border: 1px solid #2a2f3a;
+background: #171a21;
+color: white;
+font-size: 14px;
+transition: 0.2s ease;
+}
+
+.dealer-form-card input:focus {
+border-color: #f6d365;
+outline: none;
+}
+
+.submit-btn {
+padding: 14px;
+border-radius: 6px;
+border: none;
+background: linear-gradient(90deg,#f6d365,#fda085);
+font-weight: bold;
+cursor: pointer;
+transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+opacity: 0.85;
+}
+
 
 
 
