@@ -1538,6 +1538,214 @@ transition: 0.3s ease;
 .submit-btn:hover {
 opacity: 0.85;
 }
+/* ===========================
+AUCTIONS PAGE — READABILITY FIX
+Paste at bottom of styles.css
+=========================== */
+
+/* page background: lift it slightly so text can breathe */
+.auctions-page{
+background: radial-gradient(900px 500px at 50% 0%, rgba(255,255,255,.08), transparent 60%),
+linear-gradient(180deg, #070A10 0%, #0A0F18 100%);
+min-height: 100vh;
+}
+
+/* poster area spacing */
+.auction-hero{
+padding: 18px 14px 10px;
+}
+
+.auction-hero-img{
+width: 100%;
+max-width: 980px;
+margin: 0 auto;
+display: block;
+border-radius: 18px;
+border: 1px solid rgba(255,255,255,.10);
+box-shadow: 0 18px 55px rgba(0,0,0,.55);
+}
+
+/* center the button consistently */
+.auction-hero-cta{
+display:flex;
+justify-content:center;
+padding: 16px 0 6px;
+}
+
+/* the MAIN readability container */
+.auction-content{
+padding: 18px 14px 36px;
+}
+
+.auction-panel{
+max-width: 980px;
+margin: 0 auto;
+border-radius: 22px;
+
+/* brighter, readable “glass” */
+background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06));
+border: 1px solid rgba(255,255,255,.12);
+box-shadow: 0 22px 70px rgba(0,0,0,.55);
+padding: 22px;
+}
+
+/* typography hierarchy */
+.page-title{
+margin: 0 0 8px;
+font-size: 30px;
+letter-spacing: .2px;
+color: rgba(255,255,255,.95);
+}
+
+.page-subtitle{
+margin: 0 0 16px;
+font-size: 15px;
+line-height: 1.5;
+color: rgba(255,255,255,.78);
+max-width: 70ch;
+}
+
+/* IMPORTANT callout: high contrast, clean */
+.info-strip{
+margin: 14px 0 18px;
+padding: 12px 14px;
+border-radius: 14px;
+background: rgba(0,0,0,.22);
+border: 1px solid rgba(255,255,255,.14);
+color: rgba(255,255,255,.86);
+line-height: 1.4;
+}
+
+/* clean 2-column layout */
+.auction-grid{
+display: grid;
+grid-template-columns: 1.15fr .85fr;
+gap: 16px;
+align-items: start;
+}
+
+/* cards become readable, not “dark blocks” */
+.steps-card,
+.dealer-form-card{
+border-radius: 18px;
+border: 1px solid rgba(255,255,255,.12);
+background: rgba(0,0,0,.22);
+padding: 16px;
+}
+
+/* section titles */
+.section-title{
+margin: 0 0 10px;
+font-size: 16px;
+letter-spacing: .3px;
+color: rgba(255,255,255,.92);
+}
+
+/* steps: make it look intentional */
+.steps-list{
+margin: 0;
+padding-left: 18px;
+color: rgba(255,255,255,.86);
+}
+
+.steps-list li{
+margin: 10px 0;
+}
+
+.step-title{
+font-weight: 800;
+margin-bottom: 3px;
+}
+
+.step-desc{
+font-size: 13px;
+line-height: 1.35;
+color: rgba(255,255,255,.68);
+}
+
+/* pill row: clearer and spaced */
+.pill-row{
+display:flex;
+flex-wrap:wrap;
+gap: 8px;
+margin-top: 14px;
+}
+
+.pill{
+font-size: 12px;
+font-weight: 800;
+padding: 7px 10px;
+border-radius: 999px;
+background: rgba(255,255,255,.06);
+border: 1px solid rgba(255,255,255,.12);
+color: rgba(255,255,255,.78);
+}
+
+/* form inputs: brighten fields so they don't disappear */
+.dealer-form-card input{
+width: 100%;
+padding: 12px 12px;
+margin: 8px 0;
+border-radius: 12px;
+border: 1px solid rgba(255,255,255,.14);
+background: rgba(255,255,255,.06);
+color: rgba(255,255,255,.92);
+outline: none;
+}
+
+.dealer-form-card input::placeholder{
+color: rgba(255,255,255,.55);
+}
+
+.dealer-form-card input:focus{
+border-color: rgba(244,213,138,.55);
+}
+
+/* button: keep your gold look but make it crisp */
+.submit-btn, .primary-btn{
+display: inline-flex;
+justify-content:center;
+align-items:center;
+font-weight: 900;
+border-radius: 14px;
+text-decoration:none;
+}
+
+.submit-btn{
+width: 100%;
+margin-top: 10px;
+padding: 14px 16px;
+border: none;
+cursor: pointer;
+color: #0b0b0b;
+background: linear-gradient(180deg, #f4d58a, #e0a74e);
+box-shadow: 0 16px 40px rgba(0,0,0,.45);
+}
+
+.primary-btn{
+min-width: 220px;
+padding: 14px 18px;
+color: #0b0b0b;
+background: linear-gradient(180deg, #f4d58a, #e0a74e);
+box-shadow: 0 16px 40px rgba(0,0,0,.45);
+}
+
+/* small text: keep readable */
+.subtext,
+.form-footnote,
+.fineprint{
+font-size: 12px;
+line-height: 1.45;
+color: rgba(255,255,255,.66);
+}
+
+/* MOBILE: stack and increase spacing */
+@media (max-width: 900px){
+.auction-panel{ padding: 18px; }
+.auction-grid{ grid-template-columns: 1fr; }
+.page-title{ font-size: 26px; }
+}
+
 
 
 
