@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>BH Solutions Auto Auctions — Founding Dealer Registration</title>
 
-<!-- Main stylesheet -->
+<!-- Use your existing site stylesheet -->
 <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -27,10 +27,9 @@
 <main class="auctions-page">
 
 <!-- ===================== -->
-<!-- HERO / POSTER TOP -->
+<!-- HERO / POSTER -->
 <!-- ===================== -->
-<section class="auction-hero" aria-label="BH Solutions Auto Auctions Hero">
-<!-- Put the banner image in /assets (recommended) -->
+<section class="auction-hero" aria-label="BH Solutions Auto Auctions">
 <img
 src="auctions-poster-1.png"
 alt="BH Solutions Auto Auctions — Dealer-only Online Timed Auctions"
@@ -44,10 +43,10 @@ loading="eager"
 </section>
 
 <!-- ===================== -->
-<!-- BELOW HERO CONTENT -->
+<!-- CONTENT / REGISTRATION -->
 <!-- ===================== -->
-<section class="auction-content">
-<div class="auction-content-inner">
+<section class="auction-content" aria-label="Founding Dealer Registration">
+<div class="auction-panel">
 
 <h1 class="page-title">Founding Dealer Registration</h1>
 
@@ -56,17 +55,15 @@ Dealer-only access. Verification is required before bidding privileges are grant
 Register below and we’ll follow up with your onboarding.
 </p>
 
-<!-- KEY INFO STRIP -->
-<div class="info-strip" role="note" aria-label="Dealer verification note">
+<div class="info-strip" role="note">
 <strong>IMPORTANT:</strong>
 Fees are provided after registration. Upon approval, dealers receive an Approval Letter + Official Fee Sheet.
 </div>
 
-<!-- ONBOARDING STEPS + FORM GRID -->
-<div class="two-col-grid">
+<div class="auction-grid">
 
-<!-- LEFT: Steps -->
-<section class="steps-card" aria-label="How it works">
+<!-- LEFT: HOW IT WORKS -->
+<section class="steps-card" aria-label="How early access works">
 <h2 class="section-title">How Early Access Works</h2>
 
 <ol class="steps-list">
@@ -74,17 +71,14 @@ Fees are provided after registration. Upon approval, dealers receive an Approval
 <div class="step-title">Submit your dealer registration</div>
 <div class="step-desc">Name, dealership, license #, and best contact.</div>
 </li>
-
 <li>
 <div class="step-title">We verify your dealer license</div>
 <div class="step-desc">Dealer-only access for verified licensed bidders.</div>
 </li>
-
 <li>
 <div class="step-title">You receive your Approval Letter + Fee Sheet</div>
 <div class="step-desc">Delivered by email upon approval.</div>
 </li>
-
 <li>
 <div class="step-title">Early access goes live</div>
 <div class="step-desc">You’ll be notified when timed online auctions open for bidding.</div>
@@ -98,13 +92,11 @@ Fees are provided after registration. Upon approval, dealers receive an Approval
 <span class="pill">48-Hour Payment Policy</span>
 </div>
 
-<div class="fineprint">
-Operated by BH Solutions, LLC • CA Dealer #45657
-</div>
+<p class="fineprint">Operated by BH Solutions, LLC • CA Dealer #45657</p>
 </section>
 
-<!-- RIGHT: Dealer Form -->
-<section id="dealer-registration" class="dealer-form-section" aria-label="Dealer registration form">
+<!-- RIGHT: FORM -->
+<section id="dealer-registration" class="dealer-form-section" aria-label="Dealer profile form">
 <div class="dealer-form-card">
 
 <h2 class="section-title">Dealer Profile</h2>
@@ -117,23 +109,47 @@ Submit this form to request early access. Once approved, we email your Approval 
 <!-- Hidden Anti-Spam Field -->
 <input type="text" name="_gotcha" style="display:none">
 
-<!-- Helpful hidden subject line for your inbox -->
+<!-- Helpful email subject line -->
 <input type="hidden" name="_subject" value="New Dealer Registration — BH Solutions Auto Auctions">
 
-<label class="sr-only" for="fullName">Full Name</label>
-<input id="fullName" type="text" name="Full Name" placeholder="Full Name" required>
+<input
+type="text"
+name="Full Name"
+placeholder="Full Name"
+autocomplete="name"
+required
+>
 
-<label class="sr-only" for="dealershipName">Dealership Name</label>
-<input id="dealershipName" type="text" name="Dealership Name" placeholder="Dealership Name" required>
+<input
+type="text"
+name="Dealership Name"
+placeholder="Dealership Name"
+autocomplete="organization"
+required
+>
 
-<label class="sr-only" for="dealerLicense">Dealer License #</label>
-<input id="dealerLicense" type="text" name="Dealer License Number" placeholder="Dealer License #" required>
+<input
+type="text"
+name="Dealer License Number"
+placeholder="Dealer License #"
+required
+>
 
-<label class="sr-only" for="emailAddress">Email Address</label>
-<input id="emailAddress" type="email" name="Email Address" placeholder="Email Address" required>
+<input
+type="email"
+name="Email Address"
+placeholder="Email Address"
+autocomplete="email"
+required
+>
 
-<label class="sr-only" for="phoneNumber">Phone Number</label>
-<input id="phoneNumber" type="tel" name="Phone Number" placeholder="Phone Number" required>
+<input
+type="tel"
+name="Phone Number"
+placeholder="Phone Number"
+autocomplete="tel"
+required
+>
 
 <button type="submit" class="submit-btn">Register as a Dealer</button>
 
@@ -146,15 +162,13 @@ After you register, our team will verify your dealer credentials. Approved deale
 </section>
 
 </div>
-</div>
-</section>
 
-<!-- Optional page footer line -->
-<section class="auction-footerline" aria-label="Auction contact line">
-<div class="footerline-inner">
+<div class="auction-footerline" aria-label="Contact line">
 <span>bhsolutions.net</span>
 <span class="dot">•</span>
 <span>(530) 420-1863</span>
+</div>
+
 </div>
 </section>
 
