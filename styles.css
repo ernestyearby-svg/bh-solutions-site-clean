@@ -1914,6 +1914,82 @@ position: relative;
 z-index: 5;
 background: none !important;
 }
+/* ============================
+GLOBAL FIX: "Black Header Bars"
+Paste at VERY BOTTOM of styles.css
+============================ */
+
+/* 1) Make all major headings readable + remove dark blocks */
+h1, h2, h3,
+.section-title,
+.page-title,
+.hero-title,
+.block-title,
+.card-title,
+.panel-title,
+.banner-title {
+background: transparent !important;
+color: #f5f1e6 !important;
+opacity: 1 !important;
+filter: none !important;
+mix-blend-mode: normal !important;
+text-shadow: 0 2px 14px rgba(0,0,0,0.55) !important;
+}
+
+/* 2) Kill the most common overlay bars that sit on top of titles */
+h1::before, h2::before, h3::before,
+h1::after, h2::after, h3::after,
+.section-title::before, .section-title::after,
+.page-title::before, .page-title::after,
+.hero-title::before, .hero-title::after,
+.block-title::before, .block-title::after,
+.card-title::before, .card-title::after,
+.panel-title::before, .panel-title::after,
+.banner-title::before, .banner-title::after {
+content: none !important;
+display: none !important;
+}
+
+/* 3) If your headers are inside a "dark box" container, neutralize it */
+.title-bar,
+.header-bar,
+.section-header,
+.page-header,
+.hero-header,
+.banner,
+.title-wrap,
+.title-box {
+background: transparent !important;
+box-shadow: none !important;
+filter: none !important;
+}
+
+/* 4) If something is absolutely-positioned over the header area, keep text on top */
+h1, h2, h3,
+.section-title,
+.page-title,
+.hero-title,
+.block-title,
+.card-title,
+.panel-title,
+.banner-title {
+position: relative !important;
+z-index: 10 !important;
+}
+
+/* 5) Optional: if your design uses a subtle highlight behind titles, use this instead
+(Leave it commented out unless you WANT a subtle glass bar)
+
+.section-title,
+.page-title,
+.hero-title {
+background: rgba(255,255,255,0.06) !important;
+border: 1px solid rgba(255,255,255,0.10) !important;
+border-radius: 10px !important;
+padding: 10px 14px !important;
+}
+*/
+
 
 
 
