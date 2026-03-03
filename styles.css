@@ -1891,6 +1891,30 @@ opacity: 1 !important;
 color: #ffffff !important;
 text-shadow: none !important;
 }
+/* FIX DARK OVERLAY COVERING HEADERS */
+
+section {
+position: relative;
+z-index: 1;
+}
+
+section::before,
+section::after {
+display: none !important;
+}
+
+.hero-overlay,
+.overlay,
+.dark-overlay {
+display: none !important;
+}
+
+h1, h2, h3 {
+position: relative;
+z-index: 5;
+background: none !important;
+}
+
 
 
 
