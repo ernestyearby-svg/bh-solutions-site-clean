@@ -1989,6 +1989,25 @@ border-radius: 10px !important;
 padding: 10px 14px !important;
 }
 */
+/* FORM LABEL VISIBILITY FIX */
+
+.inventory-form label{
+color:#ffffff !important;
+font-weight:700;
+font-size:14px;
+letter-spacing:.2px;
+}
+
+.inventory-form input::placeholder,
+.inventory-form textarea::placeholder{
+color:rgba(255,255,255,.55);
+}
+
+.inventory-form input,
+.inventory-form textarea,
+.inventory-form select{
+color:#ffffff;
+}
 
 
 
