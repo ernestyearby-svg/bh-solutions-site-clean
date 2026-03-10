@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Upload Inventory | BH Solutions Auto Auctions</title>
+<link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
+
+<header class="site-header">
+<nav class="nav">
+<a href="index.html">HOME</a>
+<a href="inventory.html">INVENTORY</a>
+<a href="pre-approval.html">PRE-APPROVAL</a>
+<a href="real-estate.html">REAL ESTATE</a>
+<a href="about.html">ABOUT</a>
+<a href="auctions.html">AUCTIONS</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</header>
+
+<main class="auctions-page">
+
+<section class="auction-content" aria-label="Upload inventory">
+<div class="auction-panel">
+
+<h1 class="page-title">Upload Inventory</h1>
+
+<p class="page-subtitle">
+Dealers interested in consigning vehicles with BH Solutions can submit inventory details below.
+Our team will review the information and follow up with next steps.
+</p>
+
+<form action="https://formspree.io/f/xzdaondj" method="POST">
+
+<input type="hidden" name="_subject" value="New Inventory Submission — BH Solutions Auto Auctions">
+
+<input type="text" name="_gotcha" style="display:none">
+
+<label>Dealer Name</label>
+<input type="text" name="dealer_name" placeholder="Dealer Name" required>
+
+<label>Contact Name</label>
+<input type="text" name="contact_name" placeholder="Contact Name" required>
+
+<label>Email Address</label>
+<input type="email" name="email" placeholder="Email Address" required>
+
+<label>Phone Number</label>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<label>Dealer License Number</label>
+<input type="text" name="dealer_license" placeholder="Dealer License Number" required>
+
+<label>City / State</label>
+<input type="text" name="location" placeholder="City / State">
+
+<label>How many vehicles are you looking to submit?</label>
+<input type="text" name="vehicle_count" placeholder="Example: 5">
+
+<label>Typical price range</label>
+<input type="text" name="price_range" placeholder="Example: $5,000 - $25,000">
+
+<label>Title Types</label>
+<select name="title_types">
+<option value="">Select one</option>
+<option value="Clean Title">Clean Title</option>
+<option value="Rebuilt Title">Rebuilt Title</option>
+<option value="Salvage Title">Salvage Title</option>
+<option value="Mixed Inventory">Mixed Inventory</option>
+</select>
+
+<label>Vehicle Types</label>
+<input type="text" name="vehicle_types" placeholder="Cars, Trucks, SUVs, Vans, etc.">
+
+<label>Condition Notes</label>
+<textarea name="condition_notes" placeholder="Brief notes about condition, announcements, or inventory type" rows="5"></textarea>
+
+<label>Sample VINs or Units (Optional)</label>
+<textarea name="sample_units" placeholder="Enter sample Year / Make / Model / VIN if available" rows="5"></textarea>
+
+<button type="submit" class="submit-btn">Submit Inventory</button>
+
+</form>
+
+<p class="form-footnote">
+Inventory submissions do not guarantee acceptance. All vehicles and title types are subject to review, announcement standards, and auction approval.
+</p>
+
+</div>
+</section>
+
+</main>
+
+</body>
+</html>
