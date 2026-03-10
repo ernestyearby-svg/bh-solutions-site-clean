@@ -1,12 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Upload Inventory | BH Solutions Auto Auctions</title>
 <link rel="stylesheet" href="styles.css">
-</head>
 
+<style>
+.inventory-wrap{
+max-width:1100px;
+margin:0 auto;
+padding:48px 20px 70px;
+}
+
+.inventory-hero{
+background:linear-gradient(180deg, rgba(19,22,30,.96), rgba(30,34,44,.96));
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:28px 24px;
+margin-bottom:24px;
+box-shadow:0 18px 40px rgba(0,0,0,.30);
+}
+
+.inventory-title{
+margin:0 0 10px;
+font-size:38px;
+line-height:1.05;
+}
+
+.inventory-subtitle{
+margin:0;
+max-width:820px;
+color:rgba(255,255,255,.82);
+line-height:1.6;
+}
+
+.inventory-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:22px;
+align-items:start;
+}
+
+.inventory-card{
+background:linear-gradient(180deg, rgba(19,22,30,.96), rgba(30,34,44,.96));
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+padding:24px;
+box-shadow:0 18px 40px rgba(0,0,0,.28);
+}
+
+.inventory-card h2{
+margin:0 0 14px;
+font-size:24px;
+}
+
+.inventory-card p,
+.inventory-card li{
+color:rgba(255,255,255,.82);
+line-height:1.6;
+}
+
+.inventory-list{
+padding-left:20px;
+margin:0;
+}
+
+.inventory-badges{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:18px;
+}
+
+.inventory-badge{
+display:inline-block;
+padding:8px 12px;
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+background:rgba(212,162,31,.15);
+border:1px solid rgba(212,162,31,.38);
+color:#f3cc62;
+}
+
+.inventory-form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px 16px;
+}
+
+.inventory-form .full{
+grid-column:1 / -1;
+}
+
+.inventory-form label{
+display:block;
+margin:0 0 6px;
+font-weight:700;
+font-size:14px;
+}
+
+.inventory-form input,
+.inventory-form select,
+.inventory-form textarea{
+width:100%;
+padding:13px 14px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,.14);
+background:rgba(255,255,255,.04);
+color:#fff;
+font-size:15px;
+box-sizing:border-box;
+}
+
+.inventory-form textarea{
+resize:vertical;
+min-height:120px;
+}
+
+.inventory-form input::placeholder,
+.inventory-form textarea::placeholder{
+color:rgba(255,255,255,.48);
+}
+
+.inventory-note{
+margin-top:16px;
+padding:14px 16px;
+border-radius:12px;
+background:rgba(212,162,31,.10);
+border:1px solid rgba(212,162,31,.30);
+color:#f3cc62;
+font-size:14px;
+line-height:1.5;
+}
+
+.inventory-submit{
+display:inline-block;
+background:#d4a21f;
+color:#000;
+border:none;
+border-radius:10px;
+padding:14px 24px;
+font-weight:800;
+font-size:15px;
+cursor:pointer;
+box-shadow:0 6px 18px rgba(0,0,0,.28);
+}
+
+.inventory-footnote{
+margin-top:18px;
+font-size:13px;
+color:rgba(255,255,255,.62);
+line-height:1.5;
+}
+
+@media (max-width: 900px){
+.inventory-grid{
+grid-template-columns:1fr;
+}
+
+.inventory-form{
+grid-template-columns:1fr;
+}
+
+.inventory-form .full{
+grid-column:auto;
+}
+
+.inventory-title{
+font-size:30px;
+}
+}
+</style>
+</head>
 <body>
 
 <header class="site-header">
@@ -21,48 +188,89 @@
 </nav>
 </header>
 
-<main class="auctions-page">
+<main class="inventory-wrap">
 
-<section class="auction-content" aria-label="Upload inventory">
-<div class="auction-panel">
-
-<h1 class="page-title">Upload Inventory</h1>
-
-<p class="page-subtitle">
-Dealers interested in consigning vehicles with BH Solutions can submit inventory details below.
-Our team will review the information and follow up with next steps.
+<section class="inventory-hero">
+<h1 class="inventory-title">Upload Inventory</h1>
+<p class="inventory-subtitle">
+Dealers can submit vehicles for review and potential placement in upcoming BH Solutions timed online auctions.
+Submit your dealership details, vehicle profile, and photo links below. Our team will review the information and follow up with next steps.
 </p>
+</section>
 
-<form action="https://formspree.io/f/xzdaondj" method="POST">
+<section class="inventory-grid">
 
+<div class="inventory-card">
+<h2>What We’re Looking For</h2>
+<ul class="inventory-list">
+<li>Dealer-owned inventory ready for wholesale movement</li>
+<li>Cars, trucks, SUVs, vans, and specialty units</li>
+<li>Clean, rebuilt, salvage, or mixed-title inventory with proper disclosure</li>
+<li>Units with clear reserve expectations and accurate condition notes</li>
+<li>Sample photos or photo links for faster review</li>
+</ul>
+
+<div class="inventory-badges">
+<span class="inventory-badge">Dealer-Only</span>
+<span class="inventory-badge">Reserve Control</span>
+<span class="inventory-badge">Timed Online Bidding</span>
+<span class="inventory-badge">Consignment Intake</span>
+</div>
+
+<div class="inventory-note">
+For now, the safest way to submit photos is by adding share links below
+(Google Drive, Dropbox, iCloud, WeTransfer, or direct image links).
+</div>
+</div>
+
+<div class="inventory-card">
+<h2>Inventory Submission Form</h2>
+
+<form action="https://formspree.io/f/xzdaondj" method="POST" class="inventory-form">
 <input type="hidden" name="_subject" value="New Inventory Submission — BH Solutions Auto Auctions">
-
 <input type="text" name="_gotcha" style="display:none">
 
+<div>
 <label>Dealer Name</label>
 <input type="text" name="dealer_name" placeholder="Dealer Name" required>
+</div>
 
+<div>
 <label>Contact Name</label>
 <input type="text" name="contact_name" placeholder="Contact Name" required>
+</div>
 
+<div>
 <label>Email Address</label>
 <input type="email" name="email" placeholder="Email Address" required>
+</div>
 
+<div>
 <label>Phone Number</label>
 <input type="tel" name="phone" placeholder="Phone Number" required>
+</div>
 
+<div>
 <label>Dealer License Number</label>
 <input type="text" name="dealer_license" placeholder="Dealer License Number" required>
+</div>
 
+<div>
 <label>City / State</label>
 <input type="text" name="location" placeholder="City / State">
+</div>
 
-<label>How many vehicles are you looking to submit?</label>
-<input type="text" name="vehicle_count" placeholder="Example: 5">
+<div>
+<label>Vehicles to Submit</label>
+<input type="text" name="vehicle_count" placeholder="Example: 5 units">
+</div>
 
-<label>Typical price range</label>
+<div>
+<label>Typical Price Range</label>
 <input type="text" name="price_range" placeholder="Example: $5,000 - $25,000">
+</div>
 
+<div class="full">
 <label>Title Types</label>
 <select name="title_types">
 <option value="">Select one</option>
@@ -71,25 +279,48 @@ Our team will review the information and follow up with next steps.
 <option value="Salvage Title">Salvage Title</option>
 <option value="Mixed Inventory">Mixed Inventory</option>
 </select>
+</div>
 
+<div class="full">
 <label>Vehicle Types</label>
 <input type="text" name="vehicle_types" placeholder="Cars, Trucks, SUVs, Vans, etc.">
+</div>
 
-<label>Condition Notes</label>
-<textarea name="condition_notes" placeholder="Brief notes about condition, announcements, or inventory type" rows="5"></textarea>
+<div class="full">
+<label>Sample Units / VINs</label>
+<textarea name="sample_units" placeholder="Example: 2017 Nissan Altima - VIN XXXXX / 2015 Ford F-150 - VIN XXXXX"></textarea>
+</div>
 
-<label>Sample VINs or Units (Optional)</label>
-<textarea name="sample_units" placeholder="Enter sample Year / Make / Model / VIN if available" rows="5"></textarea>
+<div class="full">
+<label>Condition Notes / Announcements</label>
+<textarea name="condition_notes" placeholder="Mechanical notes, title notes, warning lights, repos, salvage disclosure, mileage concerns, etc."></textarea>
+</div>
 
-<button type="submit" class="submit-btn">Submit Inventory</button>
+<div class="full">
+<label>Photo Link 1</label>
+<input type="url" name="photo_link_1" placeholder="Paste a photo share link">
+</div>
 
+<div class="full">
+<label>Photo Link 2</label>
+<input type="url" name="photo_link_2" placeholder="Paste a second photo share link">
+</div>
+
+<div class="full">
+<label>Photo Link 3</label>
+<input type="url" name="photo_link_3" placeholder="Paste a third photo share link">
+</div>
+
+<div class="full">
+<button type="submit" class="inventory-submit">Submit Inventory</button>
+</div>
 </form>
 
-<p class="form-footnote">
-Inventory submissions do not guarantee acceptance. All vehicles and title types are subject to review, announcement standards, and auction approval.
+<p class="inventory-footnote">
+Inventory submissions do not guarantee auction placement. All units are subject to review, announcement standards, title disclosure requirements, and auction approval.
 </p>
-
 </div>
+
 </section>
 
 </main>
